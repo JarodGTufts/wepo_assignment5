@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
 import './App.css';
-import Button from './Button.js';
+
+import StyleButton from './components/button/Button.js';
+import Title from './components/title/Title.js';
 
 class App extends Component {
     render() {
         return (
-            <div className="App">
-                <Button>Test button</Button>
+            <div className='App'>
+                <StyleButton>Test button</StyleButton>
+                <Title>Testing</Title>
             </div>
         );
     }
