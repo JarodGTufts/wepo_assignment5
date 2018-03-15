@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 
 import './App.css';
 
-/* These are not submission components */
-import Button from './components/button/button.js';
-
 
 import Modal from './components/modal/modal.js';
 import ProgressBar from './components/progressBar/progressBar.js';
@@ -39,8 +36,6 @@ class App extends Component {
 
         return (
             <div className='App'>
-                {/* Sample components */}
-                <Button>Test button</Button>
 
                 {/* Submission components */}
                 <button onClick={this.open_modal}>Open Modal</button>
@@ -51,7 +46,11 @@ class App extends Component {
                     <Modal.Footer>Put my foot down</Modal.Footer>
                 </Modal>
                 <ProgressBar />
-                <NameCard />
+                <NameCard
+                    name="Jarod Gowgiel"
+                    email="mail@ru.us"
+                    telephone="+123-456-7890"
+                    imageUrl="https://vignette.wikia.nocookie.net/spongebob/images/a/ac/Spongebobwithglasses.jpeg/revision/latest?cb=20121014113150" />
 
                 <Row>
                     <Col />

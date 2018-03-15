@@ -2,9 +2,20 @@ import React from 'react';
 import styles from './nameCard.css';
 
 
-const NameCard = ({ name, email, telephone, imageUrl }) => {
+class NameCard extends React.Component {
 
-    return <div>NameCard not implemented</div>;
+    render () {
+        return (
+            <div className={styles.cardContainer}>
+                <img src={this.props.imageUrl} alt="card_image" className={styles.image} />
+                <div className={styles.cardInfo}>
+                    <h4 className={styles.entry}>Name: {this.props.name}</h4>
+                    <h4 className={styles.entry}>Email: {this.props.email}</h4>
+                    <h4 className={styles.entry}>Telephone: {this.props.telephone}</h4>
+                </div>
+            </div>
+        );
+    }
 };
 
 
