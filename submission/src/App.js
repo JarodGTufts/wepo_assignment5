@@ -18,6 +18,23 @@ import Tabs from './components/tabs/tabs.js';
 
 
 class App extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            isOpen: false
+        };
+
+        this.open_modal = this.open_modal.bind(this);
+    }
+
+    open_modal() {
+        this.setState({
+            isOpen: true
+        });
+    }
+
     render() {
 
         return (
@@ -26,7 +43,13 @@ class App extends Component {
                 <Button>Test button</Button>
 
                 {/* Submission components */}
-                <Modal />
+                <button onClick={this.open_modal}>Open Modal</button>
+
+                <Modal isOpen={this.state.isOpen} onClose={() => this.setState({isOpen: false})}>
+                    <Modal.Title>New Title</Modal.Title>
+                    <Modal.Body>Put your body here</Modal.Body>
+                    <Modal.Footer>Put my foot down</Modal.Footer>
+                </Modal>
                 <ProgressBar />
                 <NameCard />
 
