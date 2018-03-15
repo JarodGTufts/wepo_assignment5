@@ -4,7 +4,8 @@ import './App.css';
 
 /* These are not submission components */
 import Button from './components/button/button.js';
-import Title from './components/title/title.js';
+
+
 import Modal from './components/modal/modal.js';
 import ProgressBar from './components/progressBar/progressBar.js';
 import NameCard from './components/nameCard/nameCard.js';
@@ -18,11 +19,11 @@ import Tabs from './components/tabs/tabs.js';
 
 class App extends Component {
     render() {
+
         return (
             <div className='App'>
                 {/* Sample components */}
                 <Button>Test button</Button>
-                <Title>Testing</Title>
 
                 {/* Submission components */}
                 <Modal />
