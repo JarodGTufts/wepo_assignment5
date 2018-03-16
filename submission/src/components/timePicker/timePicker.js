@@ -13,4 +13,8 @@ TimePicker.propTypes = {
     format: PropTypes.oneOf([24, 12]).isRequired
 }
 
+TimePicker.defaultProps = {
+    format: 24
+}
+
 export default TimePicker;

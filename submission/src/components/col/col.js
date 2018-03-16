@@ -18,4 +18,8 @@ Col.propTypes = {
     size: PropTypes.number.isRequired
 }
 
+Col.defaultProps = {
+    size: 1
+}
+
 export default Col;

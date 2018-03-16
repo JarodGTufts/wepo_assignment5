@@ -68,5 +68,10 @@ ProgressBar.propTypes = {
     state: PropTypes.oneOf(['info', 'success', 'warning', 'danger']).isRequired
 }
 
+ProgressBar.defaultProps = {
+    striped: false,
+    animated: false
+}
+
 
 export default ProgressBar;

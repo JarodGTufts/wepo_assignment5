@@ -37,4 +37,8 @@ CartoonNetworkSpinner.propTypes = {
     interval: PropTypes.number.isRequired
 }
 
+CartoonNetworkSpinner.defaultProps = {
+    interval: 3
+}
+
 export default CartoonNetworkSpinner;
