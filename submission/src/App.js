@@ -11,6 +11,7 @@ import Col from './components/col/col.js';
 import TimePicker from './components/timePicker/timePicker.js';
 import DatePicker from './components/datePicker/datePicker.js';
 import Tabs from './components/tabs/tabs.js';
+import Tab from './components/tab/tab.js';
 import CartoonNetworkSpinner from './components/cartoonNetworkSpinner/cartoonNetworkSpinner';
 
 class App extends Component {
@@ -19,7 +20,8 @@ class App extends Component {
         super(props);
 
         this.state = {
-            isOpen: false
+            isOpen: false,
+            tab : 1
         };
 
         this.open_modal = this.open_modal.bind(this);
@@ -27,7 +29,8 @@ class App extends Component {
 
     open_modal() {
         this.setState({
-            isOpen: true
+            isOpen: true,
+            tab : 1
         });
     }
 
@@ -56,8 +59,26 @@ class App extends Component {
                 </Row>
                 <TimePicker />
                 <DatePicker />
-                <Tabs />
-                <CartoonNetworkSpinner interval={4}/>
+                <Tabs
+                    theme="dark"
+                    layout="vertical"
+                    onSelect={newTab => this.setState({ tab: newTab, isOpen: this.state.isOpen })}
+                    currentSelectedTab={this.state.tab}>
+
+                    <Tab selectionKey = {1} title={"Tab 1"}>
+                        Content 1
+                    </Tab>
+                    <Tab selectionKey={2} title={"Tab 2"}>
+                        Content 2
+                    </Tab>
+                    <Tab selectionKey={3} title={"Tab 3"}>
+                        Content 3
+                    </Tab>
+
+                </Tabs>
+                {
+                    // <CartoonNetworkSpinner interval={4}/>
+                }
             </div>
         );
     }
