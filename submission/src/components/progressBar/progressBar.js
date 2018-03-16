@@ -25,6 +25,9 @@ class ProgressBar extends React.Component {
             case 'danger':
                 curr_style = 'Danger';
                 break;
+
+            default:
+                curr_style = 'Info';
             
         }
 

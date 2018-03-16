@@ -90,7 +90,9 @@ class App extends Component {
                     imageUrl="https://vignette.wikia.nocookie.net/spongebob/images/a/ac/Spongebobwithglasses.jpeg/revision/latest?cb=20121014113150" />
 
                 <Row>
-                    <Col size={12} />
+                    <Col size={6}>Wide content</Col>
+                    <Col size={6}>Big content</Col>
+                    <Col size={1}>Wrapped content</Col>
                 </Row>
 
                 <TimePicker

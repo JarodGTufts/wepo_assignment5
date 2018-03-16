@@ -4,7 +4,13 @@ import PropTypes from 'prop-types';
 
 class Col extends React.Component {
     render () {
-        return <div>Col not implemented</div>;
+
+        var curr_width = (this.props.size/12)*100 + '%';
+        return (
+            <div className={styles.col} style={{width: curr_width}}>
+                {this.props.children}
+            </div>
+        );
     }
 };
 

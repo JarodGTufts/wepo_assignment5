@@ -4,7 +4,11 @@ import PropTypes from 'prop-types';
 
 class Row extends React.Component {
     render () {
-        return <div>Row not implemented</div>;
+        return (
+            <div className={styles.row}>
+                {this.props.children}
+            </div>
+        );
     }
 };
 
