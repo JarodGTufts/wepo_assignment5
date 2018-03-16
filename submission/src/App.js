@@ -11,8 +11,7 @@ import Col from './components/col/col.js';
 import TimePicker from './components/timePicker/timePicker.js';
 import DatePicker from './components/datePicker/datePicker.js';
 import Tabs from './components/tabs/tabs.js';
-
-
+import CartoonNetworkSpinner from './components/cartoonNetworkSpinner/cartoonNetworkSpinner';
 
 class App extends Component {
 
@@ -58,7 +57,7 @@ class App extends Component {
                 <TimePicker />
                 <DatePicker />
                 <Tabs />
-
+                <CartoonNetworkSpinner interval={4}/>
             </div>
         );
     }
