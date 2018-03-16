@@ -32,7 +32,7 @@ class App extends Component {
 
     open_modal_one() {
         this.setState({
-            isOpen_first: true
+            isOpen_first: true,
             tab : 1
         });
     }
@@ -234,6 +234,48 @@ class App extends Component {
                     </Tab>
                 </Tabs>
 
+                <Tabs
+                    theme="light"
+                    layout="horizontal"
+                    onSelect={newTab => this.setState({ tab: newTab})}
+                    currentSelectedTab={this.state.tab}>
+
+                    <Tab selectionKey={1} title="Tab 1">
+                        Content 1
+                    </Tab>
+                    <Tab selectionKey={2} title="Tab 2">
+                        Content 2
+                    </Tab>
+                </Tabs>
+
+                <Tabs
+                    theme="dark"
+                    layout="vertical"
+                    onSelect={newTab => this.setState({ tab: newTab})}
+                    currentSelectedTab={this.state.tab}>
+
+                    <Tab selectionKey={1} title="Tab 1">
+                        Content 1
+                    </Tab>
+                    <Tab selectionKey={2} title="Tab 2">
+                        Content 2
+                    </Tab>
+                </Tabs>
+
+                <Tabs
+                    theme="light"
+                    layout="vertical"
+                    onSelect={newTab => this.setState({ tab: newTab})}
+                    currentSelectedTab={this.state.tab}>
+
+                    <Tab selectionKey={1} title="Tab 1">
+                        Content 1
+                    </Tab>
+                    <Tab selectionKey={2} title="Tab 2">
+                        Content 2
+                    </Tab>
+                </Tabs>
+
                 {/*****************
                       Spinner 
                  *****************/}
@@ -247,29 +289,6 @@ class App extends Component {
                 {/* Default interval test */}
                 <h3>Default interval (3)</h3>
                 <CartoonNetworkSpinner />
-
-
-                {/*****************
-                        Tabs
-                 *****************/}
-
-                <Tabs
-                    theme="dark"
-                    layout="vertical"
-                    onSelect={newTab => this.setState({ tab: newTab, isOpen: this.state.isOpen })}
-                    currentSelectedTab={this.state.tab}>
-
-                    <Tab selectionKey = {1} title={"Tab 1"}>
-                        Content 1
-                    </Tab>
-                    <Tab selectionKey={2} title={"Tab 2"}>
-                        Content 2
-                    </Tab>
-                    <Tab selectionKey={3} title={"Tab 3"}>
-                        Content 3
-                    </Tab>
-
-                </Tabs>
             </div>
         );
     }
