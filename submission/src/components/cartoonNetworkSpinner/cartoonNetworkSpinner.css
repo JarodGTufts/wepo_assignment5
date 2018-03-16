@@ -1,1 +1,7 @@
 /* CSS STYLING GOES HERE */
+.image {
+    height: 250px;
+    vertical-align: center;
+    padding: 10px;
+    border: solid black 1px;
+}

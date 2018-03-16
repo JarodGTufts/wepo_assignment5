@@ -11,9 +11,13 @@ import Col from './components/col/col.js';
 import TimePicker from './components/timePicker/timePicker.js';
 import DatePicker from './components/datePicker/datePicker.js';
 import Tabs from './components/tabs/tabs.js';
+<<<<<<< HEAD
 import Tab from './components/tab/tab.js';
 import CartoonNetworkSpinner from './components/cartoonNetworkSpinner/cartoonNetworkSpinner.js';
 
+=======
+import CartoonNetworkSpinner from './components/cartoonNetworkSpinner/cartoonNetworkSpinner';
+>>>>>>> 6900ba7997d90f130da6d51bc8628cb43ba82c0f
 
 class App extends Component {
 
@@ -90,6 +94,7 @@ class App extends Component {
                 <Row>
                     <Col size={12} />
                 </Row>
+
                 <TimePicker
                     onTimePick={time => this.setState({ time })}
                     format = {24} />
@@ -111,6 +116,7 @@ class App extends Component {
                 </Tabs>
                 <CartoonNetworkSpinner
                     interval={4} />
+
             </div>
         );
     }
