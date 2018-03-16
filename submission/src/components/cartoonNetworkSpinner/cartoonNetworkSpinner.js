@@ -1,11 +1,15 @@
 import React from 'react';
 import styles from './cartoonNetworkSpinner.css';
+import PropTypes from 'prop-types';
 
-
-const CartoonNetworkSpinner = ({ interval }) => {
-
-    return <div>CartoonNetworkSpinner not implemented</div>;
+class CartooNetworkSpinner extends React.Component {
+    render () {
+        return <div>CartooNetworkSpinner not implemented</div>;
+    }
 };
 
+CartooNetworkSpinner.propTypes = {
+    interval: PropTypes.number.isRequired
+}
 
-export default CartoonNetworkSpinner;
+export default CartooNetworkSpinner;

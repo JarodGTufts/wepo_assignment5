@@ -1,11 +1,16 @@
 import React from 'react';
-import styles from /* INSERT COMPONENT CSS FILE HERE */;
+import styles from './carousel.css';
+import PropTypes from 'prop-types';
 
-
-const /* COMPONENT NAME */ = ({ type, children }) => {
-
-    return <div>Not implemented</div>;
+class Carousel extend React.Component {
+    render () {
+        return <div>Carousel not implemented</div>;
+    }
 };
 
+Carousel.PropTypes = {
+    images: PropTypes.arrayOf(PropTypes.string).isRequired,
+    size: PropTypes.oneOf(['small', 'medium', 'large']).isRequired
+}
 
-export default /* COMPONENT NAME */;
+export default Carousel;

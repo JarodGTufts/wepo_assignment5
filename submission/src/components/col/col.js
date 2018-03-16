@@ -1,11 +1,15 @@
 import React from 'react';
 import styles from './col.css';
+import PropTypes from 'prop-types';
 
-/* P sure having this equal to one sets a default */
-const Col = ({ size = 1 }) => {
-
-    return <div>Col not implemented</div>;
+class Col extends React.Component {
+    render () {
+        return <div>Col not implemented</div>;
+    }
 };
 
+Col.propTypes = {
+    size: PropTypes.number.isRequired
+}
 
 export default Col;

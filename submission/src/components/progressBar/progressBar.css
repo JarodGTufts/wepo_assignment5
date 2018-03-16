@@ -1,1 +1,49 @@
 /* CSS STYLING GOES HERE */
+
+.progressWrapper {
+    width: 100%;
+    background-color: rgb(170, 170, 170);
+    margin: 10px;
+}
+
+.progressBar {
+    width: 1%;
+    height: 30px;
+}
+
+.progressBarInfo {
+    composes: progressBar;
+    background-color: rgb(80, 115, 196);
+}
+
+.progressBarSuccess {
+    composes: progressBar;
+    background-color: rgb(74, 219, 74);
+}
+
+.progressBarWarning {
+    composes: progressBar;
+    background-color: rgb(255, 199, 86);
+}
+
+.progressBarDanger {
+    composes: progressBar;
+    background-color: rgb(255, 86, 86);
+}
+
+/* Animation help from https://catalin.red/stylish-css3-progress-bars/ */
+.striped {
+    background-size: 30px 30px;
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
+                        transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+                        transparent 75%, transparent);
+}
+
+.animated {
+    animation: animate 3s linear infinite;             
+}
+
+@keyframes animate {
+    0% {background-position: 0 0;} 100% {background-position: 60px 0;}
+}
+

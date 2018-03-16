@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './nameCard.css';
-
+import PropTypes from 'prop-types';
 
 class NameCard extends React.Component {
 
@@ -17,6 +17,13 @@ class NameCard extends React.Component {
         );
     }
 };
+
+NameCard.propTypes = {
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    telephone: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string.isRequired
+}
 
 
 export default NameCard;

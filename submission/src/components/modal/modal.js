@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './modal.css';
-
+import PropTypes from 'prop-types';
 
 /* TODO: Implement onClose prop function */
 class Modal extends React.Component {
@@ -42,6 +42,11 @@ Modal.Footer = class Footer extends React.Component {
     render () {
         return <div className={styles.footer}>{this.props.children}</div>
     }
+}
+
+Modal.propTypes = {
+    isOpen: PropTypes.bool.isRequired,
+    onClose: PropTypes.func.isRequired 
 }
 
 export default Modal;
