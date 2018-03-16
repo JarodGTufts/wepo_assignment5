@@ -12,6 +12,7 @@ function importAll(r) {
 const images = importAll(require.context('../../static/img/cartoonNetworkSpinner/', false, /\.(png|jpe?g|svg)$/));
 
 class CartoonNetworkSpinner extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = {
@@ -32,8 +33,8 @@ class CartoonNetworkSpinner extends React.Component {
     }
 };
 
-CartooNetworkSpinner.propTypes = {
+CartoonNetworkSpinner.propTypes = {
     interval: PropTypes.number.isRequired
 }
 
-export default CartooNetworkSpinner;
+export default CartoonNetworkSpinner;
