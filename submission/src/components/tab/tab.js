@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 
 class Tab extends React.Component {
     render () {
-        return <div>Tab not implemented</div>
+        return <div>{this.props.children}</div>
     }
 }
 
 Tab.propTypes = {
     selectionKey: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired
-}
+};
 
 export default Tab;

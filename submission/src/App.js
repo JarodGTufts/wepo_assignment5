@@ -12,11 +12,8 @@ import Col from './components/col/col.js';
 import TimePicker from './components/timePicker/timePicker.js';
 import DatePicker from './components/datePicker/datePicker.js';
 import Tabs from './components/tabs/tabs.js';
-
 import Tab from './components/tab/tab.js';
 import CartoonNetworkSpinner from './components/cartoonNetworkSpinner/cartoonNetworkSpinner.js';
-
-
 
 class App extends Component {
 
@@ -36,6 +33,7 @@ class App extends Component {
     open_modal_one() {
         this.setState({
             isOpen_first: true
+            tab : 1
         });
     }
 
@@ -187,7 +185,6 @@ class App extends Component {
                     <Col>12</Col>
                 </Row>
 
-
                 {/*****************
                      Time Picker 
                  *****************/}
@@ -251,6 +248,28 @@ class App extends Component {
                 <h3>Default interval (3)</h3>
                 <CartoonNetworkSpinner />
 
+
+                {/*****************
+                        Tabs
+                 *****************/}
+
+                <Tabs
+                    theme="dark"
+                    layout="vertical"
+                    onSelect={newTab => this.setState({ tab: newTab, isOpen: this.state.isOpen })}
+                    currentSelectedTab={this.state.tab}>
+
+                    <Tab selectionKey = {1} title={"Tab 1"}>
+                        Content 1
+                    </Tab>
+                    <Tab selectionKey={2} title={"Tab 2"}>
+                        Content 2
+                    </Tab>
+                    <Tab selectionKey={3} title={"Tab 3"}>
+                        Content 3
+                    </Tab>
+
+                </Tabs>
             </div>
         );
     }

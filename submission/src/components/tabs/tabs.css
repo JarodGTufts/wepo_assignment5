@@ -1,1 +1,143 @@
 /* CSS STYLING GOES HERE */
+
+.dark {
+    background-color: darkgray;
+    color: white;
+}
+
+.light {
+    background-color: white;
+    color: black
+}
+
+.active {
+    background-color: cornflowerblue;
+}
+
+.tabs {
+    border: solid black 1px;
+    padding: 5px;
+    display: inline-block;
+}
+
+.tabsLight {
+    composes: tabs;
+    composes: light;
+}
+
+.tabsDark {
+    composes: tabs;
+    composes: dark;
+}
+.horizontal {
+    display: inline-block;
+}
+.vertical {
+    display: block;
+}
+.tabHeader{
+    border: solid 1px black;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.tabHeaderLight {
+    composes: tabHeader;
+    composes: light;
+}
+.tabHeaderDark {
+    composes: tabHeader;
+    composes: dark;
+}
+
+.tabHeaderLightHorizontal {
+    composes: tabHeaderLight;
+    composes: horizontal;
+}
+
+.tabHeaderDarkHorizontal {
+    composes : tabHeaderDark;
+    composes: horizontal;
+}
+
+.tabHeaderDarkVertical {
+    composes: tabHeaderDark;
+    composes: vertical;
+}
+.tabHeaderLightVertical {
+    composes: tabHeaderLight;
+    composes: vertical;
+}
+
+.tabHeaderLightHorizontalActive {
+    composes: tabHeaderLight;
+    composes: active;
+}
+
+.tabHeaderDarkHorizontalActive {
+    composes : tabHeaderDarkHorizontal;
+    composes: active;
+}
+
+.tabHeaderDarkVerticalActive {
+    composes: tabHeaderDarkVertical;
+    composes: active;
+}
+.tabHeaderLightVerticalActive {
+    composes: tabHeaderLightVertical;
+    composes: active;
+}
+
+.tabList {
+    display: inline-block;
+}
+
+.tabListDark {
+    composes: tabList;
+    composes: dark;
+}
+
+.tabListLight {
+    composes: tabList;
+    composes: light;
+}
+
+.currentTab {
+    padding: 5px;
+    margin-right: 5px;
+    border: solid 1px black;
+
+}
+
+.currentTabDark {
+    composes: dark;
+    composes: currentTab;
+}
+.currentTabLight {
+    composes: light;
+    composes: currentTab;
+}
+
+
+.currentTabDarkHorizontal {
+    composes: currentTabDark;
+    display: block;
+}
+
+.currentTabLightHorizontal {
+    composes: currentTabLight;
+    display: block;
+}
+
+.currentTabDarkVertical {
+    composes: currentTabDark;
+    float: right;
+    display: inline-block;
+}
+
+.currentTabLightVertical {
+    composes: currentTabLight;
+    float: right;
+    display: inline-block;
+}
+
