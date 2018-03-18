@@ -3,8 +3,6 @@ import styles from './cartoonNetworkSpinner.css';
 
 import PropTypes from 'prop-types';
 
-import Image from '../../static/img/cartoonNetworkSpinner/0.png';
-
 function importAll(r) {
     return r.keys().map(r);
 }

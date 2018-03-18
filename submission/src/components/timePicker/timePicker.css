@@ -1,1 +1,13 @@
 /* CSS STYLING GOES HERE */
+
+.mainDiv {
+    display: inline;
+    position: relative;
+}
+
+.arm {
+    position: absolute;
+    bottom: 200px;
+    right: 200px;
+}
+

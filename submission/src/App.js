@@ -43,6 +43,36 @@ class App extends Component {
         return (
             <div className='App'>
 
+                {/*****************
+                 Time Picker
+                 *****************/}
+                <hr />
+                <h2>Time picker test</h2>
+
+                <h3>12H format</h3>
+                <TimePicker
+                    onTimePick={first_time => this.setState({ first_time })}
+                    format = {12} />
+                <h3>With default (24)</h3>
+                <TimePicker
+                    onTimePick={second_time => this.setState({ second_time })} />
+
+
+                {/*****************
+                 Date picker
+                 *****************/}
+                <hr />
+                <h2>Date picker test</h2>
+                <h3>en-EN test</h3>
+                <DatePicker
+                    onDatePick={first_date => this.setState({ first_date })}
+                    locale="en-EN" />
+
+                <h3>Default test (is-IS)</h3>
+                <DatePicker
+                    onDatePick={second_date => this.setState({ second_date })} />
+
+
                 {/* Submission components */}
 
                 {/*****************
@@ -185,34 +215,7 @@ class App extends Component {
                     <Col>12</Col>
                 </Row>
 
-                {/*****************
-                     Time Picker 
-                 *****************/}
-                <hr />
-                <h2>Time picker test</h2>
 
-                <h3>12H format</h3>
-                <TimePicker
-                    onTimePick={first_time => this.setState({ first_time })}
-                    format = {12} />
-                <h3>With default (24)</h3>
-                <TimePicker
-                    onTimePick={second_time => this.setState({ second_time })} />
-                
-
-                {/*****************
-                     Date picker 
-                 *****************/}
-                <hr />
-                <h2>Date picker test</h2>
-                <h3>en-EN test</h3>
-                <DatePicker
-                    onDatePick={first_date => this.setState({ first_date })}
-                    locale="en-EN" />
-
-                <h3>Default test (is-IS)</h3>
-                <DatePicker
-                    onDatePick={second_date => this.setState({ second_date })} />
                 
 
                 {/*****************
