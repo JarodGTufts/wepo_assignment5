@@ -11,6 +11,7 @@ const clock12h = images[0];
 const clock24h = images[1];
 const minutes = images[2];
 
+
 class TimePicker extends React.Component {
     constructor(props) {
         super(props);
@@ -20,12 +21,19 @@ class TimePicker extends React.Component {
             chooseHours: true
 
         }
+        this.id = Math.random()%1;
     }
 
     getHourAreas() {
-        let timeAreas = this.calculateAreas(80, 12, 100, 100, 0, i => this.setState({hours: i, minutes: this.state.minutes, chooseHours: false}));
+        let timeAreas = this.calculateAreas(80, 12, 100, 100, 0,
+          (i) => this.setState({hours: i,
+                                minutes: this.state.minutes,
+                                chooseHours: false}));
         if(this.props.format === 24) {
-            let timeAreas24 = this.calculateAreas(60, 12, 100, 100, 12, i => this.setState({hours: i, minutes: this.state.minutes, chooseHours: false}));
+            let timeAreas24 = this.calculateAreas(55, 12, 100, 100, 12,
+              (i) => this.setState({hours: i,
+                                    minutes: this.state.minutes,
+                                    chooseHours: false}));
             timeAreas.push.apply(timeAreas, timeAreas24);
         }
         return timeAreas;
@@ -39,8 +47,10 @@ class TimePicker extends React.Component {
             let x = radius * Math.cos(radian) + centerX;
             let y = radius * Math.sin(radian) + centerY;
             let coords = x + ',' + y + ',' + 5;
+            let key = "area" + radius + parts + i;
             timeAreas.push(
                 <area
+                    key={key}
                     shape="circle"
                     coords={coords}
                     href=""
@@ -54,11 +64,13 @@ class TimePicker extends React.Component {
         return timeAreas;
     }
     getMinuteAreas() {
-        return this.calculateAreas(80, 60, 100, 100, 0, i => this.setState({hours: this.state.hours, minutes: i, chooseHours: false}));
+        return this.calculateAreas(80, 60, 100, 100, 0,
+          (i) => this.setState({ hours: this.state.hours,
+                                minutes: i,
+                                chooseHours: false}));
     }
 
     render () {
-        console.log(this.state);
         let timeAreas;
         let circleUrl;
         if(this.state.chooseHours) {
@@ -72,15 +84,36 @@ class TimePicker extends React.Component {
             circleUrl = minutes;
             timeAreas =  this.getMinuteAreas();
         }
+        let paddedHours = this.state.hours.toString().padStart(2,"0");
+        let paddedMinutes = this.state.minutes.toString().padStart(2,"0")
+        let id = "#" + this.id;
         return <div className={styles.main}>
-            <div className={styles.clock}> {this.state.hours.toString().padStart(2,"0")} : {this.state.minutes.toString().padStart(2,"0")} </div>
-            <img className={styles.circle} src={circleUrl} width="200" height="200" alt="clock" useMap="#clockMap"/>
-            <map name="clockMap">
+            <div className={styles.clock}>
+              {paddedHours} : {paddedMinutes}
+            </div>
+            <img
+              className={styles.circle}
+              src={circleUrl}
+              alt="clock"
+              useMap={id}/>
+            <map name={this.id}>
                 {timeAreas}
             </map>
             <div className={styles.buttons}>
-                <button className={styles.button} onClick={event => { this.setState({hours: this.state.hours, minutes: this.state.minutes, chooseHours: true})}}>Back</button>
-                <button className={styles.button} onClick={event => { this.props.onTimePick(this.state.hours + ":" + this.state.minutes);}}>Done</button>
+                <button
+                  className={styles.button}
+                  onClick={ (event) => {
+                    this.setState({hours: this.state.hours,
+                                  minutes: this.state.minutes,
+                                  chooseHours: true})}}>
+                    Back
+                </button>
+                <button
+                  className={styles.button}
+                  onClick={ (event) => {
+                      this.props.onTimePick(this.state.hours + ":" + this.state.minutes);}}>
+                  Done
+                </button>
             </div>
 
 

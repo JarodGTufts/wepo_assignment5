@@ -4,8 +4,15 @@
     padding-left: 75px;
 }
 
+.circle {
+  width: 200px;
+  height: 200px;
+}
+
 .main {
     width: 200px;
+    border: 1px grey solid;
+    padding: 5px;
 }
 
 .buttons {
