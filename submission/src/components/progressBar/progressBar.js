@@ -3,7 +3,6 @@ import styles from './progressBar.css';
 import PropTypes from 'prop-types';
 
 
-/* TODO: Striping and animating */
 class ProgressBar extends React.Component {
     render () {
         

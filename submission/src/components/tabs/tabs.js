@@ -47,6 +47,11 @@ Tabs.propTypes = {
         layout: PropTypes.oneOf(['horizontal', 'vertical']).isRequired,
         onSelect: PropTypes.func.isRequired,
         currentSelectedTab: PropTypes.number.isRequired
-    };
+};
+
+Tabs.defaultProps = {
+    theme: 'light',
+    layout: 'horizontal'
+}
 
 export default Tabs;

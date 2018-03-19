@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import styles from './tab.css';
 class Tab extends React.Component {
     render () {
-        return <div>{this.props.children}</div>
+        return <div className={styles.tab}>{this.props.children}</div>
     }
 }
 

@@ -46,39 +46,9 @@ class App extends Component {
 
 
 
+                
                 {/*****************
-                 Date picker
-                 *****************/}
-                <hr />
-                <h2>Date picker test</h2>
-                <h3>en-EN test</h3>
-                <DatePicker
-                    onDatePick={first_date => this.setState({ first_date })}
-                    locale="en-EN" />
-
-                <h3>Default test (is-IS)</h3>
-                <DatePicker
-                    onDatePick={second_date => this.setState({ second_date })} />
-
-
-                    {/*****************
-                     Time Picker
-                     *****************/}
-                    <hr />
-                    <h2>Time picker test</h2>
-
-                    <h3>12H format</h3>
-                    <TimePicker
-                        onTimePick={first_time => this.setState({ first_time })}
-                        format = {12} />
-                    <h3>With default (24)</h3>
-                    <TimePicker
-                        onTimePick={second_time => this.setState({ second_time })} />
-
-                {/* Submission components */}
-
-                {/*****************
-                        Modal
+                      1. Modal
                  *****************/}
                 <h2>Modal tests</h2>
                 <button onClick={this.open_modal_one}>Open first Modal</button>
@@ -106,7 +76,7 @@ class App extends Component {
 
 
                 {/*****************
-                    Progress Bar
+                    2. Progress Bar
                  *****************/}
                 <hr />
                 <h2>Progress bar tests</h2>
@@ -150,7 +120,7 @@ class App extends Component {
 
 
                 {/*****************
-                     Name Card
+                    3. Name Card
                  *****************/}
                 <hr />
                 <h2>Name card test</h2>
@@ -162,7 +132,7 @@ class App extends Component {
 
 
                 {/*****************
-                      Carousel
+                    4. Carousel
                  *****************/}
                 <hr />
                 <h2>Carousel test</h2>
@@ -193,7 +163,7 @@ class App extends Component {
 
 
                 {/*****************
-                     Row and Col
+                  5-6. Row and Col
                  *****************/}
                 <hr />
                 <h2>Row and column tests</h2>
@@ -217,7 +187,34 @@ class App extends Component {
                     <Col>12</Col>
                 </Row>
 
+                {/*****************
+                   7. Time Picker
+                 *****************/}
+                <hr />
+                <h2>Time picker test</h2>
 
+                <h3>12H format</h3>
+                <TimePicker
+                    onTimePick={first_time => this.setState({ first_time })}
+                    format = {12} />
+                <h3>With default (24)</h3>
+                <TimePicker
+                    onTimePick={second_time => this.setState({ second_time })} />
+
+
+                {/*****************
+                    8. Date picker
+                 *****************/}
+                <hr />
+                <h2>Date picker test</h2>
+                <h3>en-EN test</h3>
+                <DatePicker
+                    onDatePick={first_date => this.setState({ first_date })}
+                    locale="en-EN" />
+
+                <h3>Default test (is-IS)</h3>
+                <DatePicker
+                    onDatePick={second_date => this.setState({ second_date })} />
 
 
                 {/*****************
@@ -225,6 +222,8 @@ class App extends Component {
                  *****************/}
                 <hr />
                 <h2>Tabs and Tab test</h2>
+
+                <h3>Dark, horizontal test</h3>
                 <Tabs
                     theme="dark"
                     layout="horizontal"
@@ -232,13 +231,16 @@ class App extends Component {
                     currentSelectedTab={this.state.tab}>
 
                     <Tab selectionKey={1} title="Tab 1">
-                        Content 1
+                        This is some very long content This is some very long content This is some very long content This is some very long content This is some very long content This is some very long content This is some very long content This is some very long content
                     </Tab>
                     <Tab selectionKey={2} title="Tab 2">
                         Content 2
                     </Tab>
                 </Tabs>
+                <br />
+                <br />
 
+                <h3>Light, horizontal test</h3>
                 <Tabs
                     theme="light"
                     layout="horizontal"
@@ -246,13 +248,17 @@ class App extends Component {
                     currentSelectedTab={this.state.tab}>
 
                     <Tab selectionKey={1} title="Tab 1">
-                        Content 1
+                        This is some very long content This is some very long content This is some very long content This is some very long content This is some very long content This is some very long content This is some very long content This is some very long content
+
                     </Tab>
                     <Tab selectionKey={2} title="Tab 2">
                         Content 2
                     </Tab>
                 </Tabs>
+                <br />
+                <br />
 
+                <h3>Dark, vertical test</h3>
                 <Tabs
                     theme="dark"
                     layout="vertical"
@@ -260,13 +266,16 @@ class App extends Component {
                     currentSelectedTab={this.state.tab}>
 
                     <Tab selectionKey={1} title="Tab 1">
-                        Content 1
+                        This is some very long content This is some very long content This is some very long content This is some very long content This is some very long content This is some very long content This is some very long content This is some very long content
                     </Tab>
                     <Tab selectionKey={2} title="Tab 2">
                         Content 2
                     </Tab>
                 </Tabs>
+                <br />
+                <br />
 
+                <h3>Light, vertical test</h3>
                 <Tabs
                     theme="light"
                     layout="vertical"
@@ -274,7 +283,20 @@ class App extends Component {
                     currentSelectedTab={this.state.tab}>
 
                     <Tab selectionKey={1} title="Tab 1">
-                        Content 1
+                        This is some very long content This is some very long content This is some very long content This is some very long content This is some very long content This is some very long content This is some very long content This is some very long content
+                    </Tab>
+                    <Tab selectionKey={2} title="Tab 2">
+                        Content 2
+                    </Tab>
+                </Tabs>
+
+                <h3>Default value test (should be light, horizontal)</h3>
+                <Tabs
+                    onSelect={newTab => this.setState({ tab: newTab})}
+                    currentSelectedTab={this.state.tab}>
+
+                    <Tab selectionKey={1} title="Tab 1">
+                        This should have default values
                     </Tab>
                     <Tab selectionKey={2} title="Tab 2">
                         Content 2

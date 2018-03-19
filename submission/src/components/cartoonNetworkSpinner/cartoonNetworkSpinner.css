@@ -3,5 +3,9 @@
     height: 250px;
     vertical-align: center;
     padding: 10px;
-    border: solid black 1px;
+    -webkit-animation-name: spin; 
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-out;
+
 }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }

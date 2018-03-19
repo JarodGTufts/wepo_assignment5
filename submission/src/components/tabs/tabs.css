@@ -7,7 +7,7 @@
 
 .light {
     background-color: white;
-    color: black
+    color: black;
 }
 
 .active {
@@ -36,18 +36,19 @@
     display: block;
 }
 .tabHeader{
-    border: solid 1px black;
     padding: 5px;
-    margin-right: 5px;
+    font-weight: bold;
 }
 
 .tabHeaderLight {
     composes: tabHeader;
     composes: light;
+
 }
 .tabHeaderDark {
     composes: tabHeader;
     composes: dark;
+
 }
 
 .tabHeaderLightHorizontal {
@@ -104,9 +105,8 @@
 
 .currentTab {
     padding: 5px;
-    margin-right: 5px;
-    border: solid 1px black;
-
+    margin: 5px;
+    background-color: rgb(230, 230, 230, .4);
 }
 
 .currentTabDark {
