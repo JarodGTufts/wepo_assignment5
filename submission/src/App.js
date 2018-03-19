@@ -39,23 +39,11 @@ class App extends Component {
 
 
     render() {
-
+        console.log(this.state);
         return (
             <div className='App'>
 
-                {/*****************
-                 Time Picker
-                 *****************/}
-                <hr />
-                <h2>Time picker test</h2>
 
-                <h3>12H format</h3>
-                <TimePicker
-                    onTimePick={first_time => this.setState({ first_time })}
-                    format = {12} />
-                <h3>With default (24)</h3>
-                <TimePicker
-                    onTimePick={second_time => this.setState({ second_time })} />
 
 
                 {/*****************
@@ -73,22 +61,36 @@ class App extends Component {
                     onDatePick={second_date => this.setState({ second_date })} />
 
 
+                    {/*****************
+                     Time Picker
+                     *****************/}
+                    <hr />
+                    <h2>Time picker test</h2>
+
+                    <h3>12H format</h3>
+                    <TimePicker
+                        onTimePick={first_time => this.setState({ first_time })}
+                        format = {12} />
+                    <h3>With default (24)</h3>
+                    <TimePicker
+                        onTimePick={second_time => this.setState({ second_time })} />
+
                 {/* Submission components */}
 
                 {/*****************
-                        Modal 
+                        Modal
                  *****************/}
                 <h2>Modal tests</h2>
                 <button onClick={this.open_modal_one}>Open first Modal</button>
 
-                <Modal 
-                    isOpen={this.state.isOpen_first} 
+                <Modal
+                    isOpen={this.state.isOpen_first}
                     onClose={() => this.setState({isOpen_first: false})}>
 
                     <Modal.Title>New Title</Modal.Title>
                     <Modal.Body>Put your body here</Modal.Body>
                     <Modal.Footer>Put my foot down</Modal.Footer>
-                
+
                 </Modal>
                 <br />
 
@@ -99,12 +101,12 @@ class App extends Component {
                     <Modal.Title>This should not appear</Modal.Title>
                     <Modal.Body>Because it has no specified prop</Modal.Body>
                     <Modal.Footer>That's fun</Modal.Footer>
-                
+
                 </Modal>
 
 
                 {/*****************
-                    Progress Bar 
+                    Progress Bar
                  *****************/}
                 <hr />
                 <h2>Progress bar tests</h2>
@@ -116,25 +118,25 @@ class App extends Component {
 
                 {/* Core progress bar testing */}
                 Striped and animated, info
-                <ProgressBar 
+                <ProgressBar
                     progress={this.state.progress}
                     striped={true}
                     animated={true}
                     state={"info"} />
                 Animated but not striped (invisible), success
-                <ProgressBar 
+                <ProgressBar
                     progress={this.state.progress + 10}
                     striped={false}
                     animated={true}
                     state={"success"} />
                 Not striped or animated, warning
-                <ProgressBar 
+                <ProgressBar
                     progress={this.state.progress + 20}
                     striped={false}
                     animated={false}
                     state={"warning"} />
                 Striped but not animated, danger
-                <ProgressBar 
+                <ProgressBar
                     progress={this.state.progress + 30}
                     striped={true}
                     animated={false}
@@ -142,13 +144,13 @@ class App extends Component {
 
                 {/* Progress bar default test */}
                 Default values (not striped, not animated), info
-                <ProgressBar 
+                <ProgressBar
                     progress={this.state.progress + 40}
                     state={"info"} />
 
 
                 {/*****************
-                     Name Card 
+                     Name Card
                  *****************/}
                 <hr />
                 <h2>Name card test</h2>
@@ -160,12 +162,12 @@ class App extends Component {
 
 
                 {/*****************
-                      Carousel 
+                      Carousel
                  *****************/}
                 <hr />
                 <h2>Carousel test</h2>
                 <h3>Small size test</h3>
-                <Carousel 
+                <Carousel
                     images={[
                         'https://vignette.wikia.nocookie.net/cartoons/images/4/47/Spongebob.png/revision/latest?cb=20150913114858',
                         'http://s1.dmcdn.net/gunHY/1280x720-y-w.jpg'
@@ -174,15 +176,15 @@ class App extends Component {
 
                 {/* Default size */}
                 <h3>Default size test (medium)</h3>
-                <Carousel 
+                <Carousel
                     images={[
                         'https://vignette.wikia.nocookie.net/cartoons/images/4/47/Spongebob.png/revision/latest?cb=20150913114858',
                         'http://s1.dmcdn.net/gunHY/1280x720-y-w.jpg'
                     ]}
                     size="medium" />
-                
+
                 <h3>Large size test</h3>
-                <Carousel 
+                <Carousel
                     images={[
                         'https://vignette.wikia.nocookie.net/cartoons/images/4/47/Spongebob.png/revision/latest?cb=20150913114858',
                         'http://s1.dmcdn.net/gunHY/1280x720-y-w.jpg'
@@ -191,7 +193,7 @@ class App extends Component {
 
 
                 {/*****************
-                     Row and Col 
+                     Row and Col
                  *****************/}
                 <hr />
                 <h2>Row and column tests</h2>
@@ -199,7 +201,7 @@ class App extends Component {
                     <Col size={6}><h3 style={{'textAlign': 'center'}}>6-wide content</h3></Col>
                     <Col size={6}><h3 style={{'textAlign': 'center'}}>6-wide content</h3></Col>
                     <Col size={12}><h3 style={{'textAlign': 'center'}}>12-wide wrapped content</h3></Col>
-                    
+
                     {/* Default size tests */}
                     <Col>1</Col>
                     <Col>2</Col>
@@ -216,14 +218,14 @@ class App extends Component {
                 </Row>
 
 
-                
+
 
                 {/*****************
-                    Tabs and Tab 
+                    Tabs and Tab
                  *****************/}
                 <hr />
                 <h2>Tabs and Tab test</h2>
-                <Tabs 
+                <Tabs
                     theme="dark"
                     layout="horizontal"
                     onSelect={newTab => this.setState({ tab: newTab})}
@@ -280,7 +282,7 @@ class App extends Component {
                 </Tabs>
 
                 {/*****************
-                      Spinner 
+                      Spinner
                  *****************/}
                 <hr />
                 <h2>Spinner test</h2>
