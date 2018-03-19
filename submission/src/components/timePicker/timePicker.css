@@ -1,13 +1,20 @@
 /* CSS STYLING GOES HERE */
 
-.mainDiv {
-    display: inline;
-    position: relative;
+.clock {
+    padding-left: 75px;
 }
 
-.arm {
-    position: absolute;
-    bottom: 200px;
-    right: 200px;
+.main {
+    width: 200px;
 }
 
+.buttons {
+    margin-left: 5px;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    width: 80px;
+    margin-right:5px;
+}

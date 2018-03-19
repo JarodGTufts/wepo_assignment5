@@ -23,7 +23,6 @@ class Tabs extends React.Component {
                 className += "Active";
             }
 
-            console.log(className);
             header.push(
                 <div className={styles[className]}
                      onClick={ () => this.props.onSelect(tab.props.selectionKey)}
