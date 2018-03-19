@@ -1,1 +1,50 @@
 /* CSS STYLING GOES HERE */
+.medium {
+    width: 66%;
+}
+.large {
+    width: 100%;
+}
+.small {
+    width: 33%;
+}
+.main {
+    width: 75%;
+    margin: 10px;
+}
+.content {
+    display: inline-block;
+    margin: auto;
+    border: 1px lightgrey solid;
+}
+.contentsmall {
+    composes: content;
+    composes: small;
+}
+.contentlarge {
+    composes: content;
+    composes: large;
+}
+.contentmedium {
+    composes: content;
+    composes: medium;
+}
+.img {
+    margin: auto;
+    display: block;
+
+}
+.img {
+    width: 100%;
+}
+
+.buttons {
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+}
+.button {
+    display: inline-block;
+    margin: 1px;
+}

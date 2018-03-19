@@ -100,7 +100,7 @@ class App extends Component {
 
                     <Modal.Title>This should not appear</Modal.Title>
                     <Modal.Body>Because it has no specified prop</Modal.Body>
-                    <Modal.Footer>That's fun</Modal.Footer>
+                    <Modal.Footer>Thats fun</Modal.Footer>
 
                 </Modal>
 
