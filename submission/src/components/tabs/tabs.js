@@ -4,10 +4,6 @@ import PropTypes from 'prop-types';
 
 
 class Tabs extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         let theme = this.capitalizeFirstLetter(this.props.theme);
         let layout = this.capitalizeFirstLetter(this.props.layout);

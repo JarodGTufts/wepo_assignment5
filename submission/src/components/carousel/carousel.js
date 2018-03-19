@@ -16,7 +16,8 @@ class Carousel extends React.Component {
             <div className = {styles.main}>
                 <div className = {styles["content" + this.props.size]}>
                     <div className = {styles.image}>
-                        <img className = {styles["img"]} src={this.props.images[this.state.index]}/>
+                        <img className = {styles["img"]} src={this.props.images[this.state.index]}
+                        alt= {""}/>
                     </div>
 
                     <div className = {styles.buttons}>

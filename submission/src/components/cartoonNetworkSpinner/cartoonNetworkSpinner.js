@@ -21,7 +21,7 @@ class CartoonNetworkSpinner extends React.Component {
         setInterval(this.rotateImages.bind(this), this.props.interval * 1000)
     }
     render() {
-        return <img src={images[this.state.index]} className = {styles.image}/>;
+        return <img alt={""} src={images[this.state.index]} className = {styles.image}/>;
     }
 
     rotateImages() {
