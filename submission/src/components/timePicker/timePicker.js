@@ -2,14 +2,9 @@ import React from 'react';
 import styles from './timePicker.css';
 import PropTypes from 'prop-types';
 
-function importAll(r) {
-    return r.keys().map(r);
-}
-
-const images = importAll(require.context('../../static/img/timePicker/', false, /\.(png|jpe?g|svg)$/));
-const clock12h = images[0];
-const clock24h = images[1];
-const minutes = images[2];
+const clock12h = 'https://image.ibb.co/bVFa4c/12h.png'
+const clock24h = 'https://image.ibb.co/gaqWcx/24h.png'
+const minutes = 'https://image.ibb.co/mVY6AH/minutes.png';
 
 
 class TimePicker extends React.Component {

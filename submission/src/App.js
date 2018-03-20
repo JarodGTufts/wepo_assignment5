@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import './App.css';
 
-
 import Modal from './components/modal/modal.js';
 import ProgressBar from './components/progressBar/progressBar.js';
 import NameCard from './components/nameCard/nameCard.js';
@@ -46,7 +45,7 @@ class App extends Component {
 
 
 
-                
+
                 {/*****************
                       1. Modal
                  *****************/}

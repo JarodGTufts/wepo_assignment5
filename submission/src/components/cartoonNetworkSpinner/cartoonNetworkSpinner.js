@@ -3,11 +3,17 @@ import styles from './cartoonNetworkSpinner.css';
 
 import PropTypes from 'prop-types';
 
-function importAll(r) {
-    return r.keys().map(r);
-}
-
-const images = importAll(require.context('../../static/img/cartoonNetworkSpinner/', false, /\.(png|jpe?g|svg)$/));
+const images = [
+    'https://image.ibb.co/dnUJPc/9.png',
+    'https://preview.ibb.co/kOVQ4c/8.png',
+    'https://image.ibb.co/f0CGAH/7.png',
+    'https://preview.ibb.co/et4UVH/6.png',
+    'https://image.ibb.co/iFewAH/5.png',
+    'https://image.ibb.co/jKTpVH/4.png',
+    'https://image.ibb.co/ccGMcx/3.png',
+    'https://image.ibb.co/fEAExx/2.png',
+    'https://preview.ibb.co/jOddPc/1.png',
+    'https://image.ibb.co/gPOCjc/0.png']
 
 class CartoonNetworkSpinner extends React.Component {
 
